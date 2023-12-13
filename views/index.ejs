@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-background min-h-screen grid place-items-center text-black">
+    <section class="bg-gray-300  p-8 rounded-xl flex flex-col gap-5 place-items-center">
+      <h1 class="text-4xl pt-4">UTQR Code Generator</h1>
+      <h2 class="text-xl ">Please type the URL or Text below and click Generate!</h2>
+        <div class="w-full flex justify-between py-4 ">      
+          <form class="form w-full flex justify-between gap-5 overflow-hidden" action="/scan" method="POST">
+            <input class="w-full rounded-md bg-gray-300 border-2 px-2 border-background outline-none hover:scale-95 transition duration-200 ease-in-out overflow-hidden text-ellipsis whitespace-nowrap" name="url" class="form-control" placeholder="URL" type="text" required>
+            
+            <button type="submit" class="btn btn-primary px-3 py-2 bg-background text-gray-300 rounded-md border-2 hover:bg-gray-300 hover:scale-95 border-background hover:text-background transition duration-200 ease-in-out" value="Get QR">Generate</button>
+        </form>
+    </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </body>
+</html>
